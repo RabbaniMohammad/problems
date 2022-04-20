@@ -4,114 +4,147 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Checking the priority</title>
+    <title>Javascript</title>
   </head>
   <body>
-    <p id="p">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae fugit
-      tempora velit qui. A quibusdam quis eaque tempore, facere sint? Lorem
-      ipsum dolor sit amet consectetur adipisicing elit. Sint et sit illum, a,
-      voluptatum rem corporis quos repudiandae odio consequuntur accusamus
-      ipsam, at nisi eaque eligendi mollitia veniam. Exercitationem, at?
-    </p>
-    <ul>
-      <li>Home</li>
-      <li>Settings</li>
-      <li>Issues</li>
-      <li>Options</li>
-    </ul>
-    <h1>This is a h1 heading</h1>
-    <h2>This is a h2 headning</h2>
-    <h3>This is a h3 heading</h3>
-    <h4>This is a h4 heading</h4>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-      </tr>
-      <tr>
-        <td>Rabbani</td>
-        <td>21</td>
-      </tr>
-    </table>
-    <ol>
-      <li>Home</li>
-      <li>Settings</li>
-      <li>Issues</li>
-      <li>Options</li>
-    </ol>
-    <form action="index.html" , method="GET">
-      <select name="" id="">
-        <option value="">1</option>
-        <option value="">2</option>
-        <option value="">3</option>
-        <option value="">4</option>
-        <option value="">5</option>
-      </select>
-    </form>
-    <a href="https://www.google.com">Google</a>
-    <a href="main.html">Google</a>
-    <a href="#p">paragsraph section</a>
-    <b
-      ><i><u>rabbani</u></i></b
-    >
-    <!-- media tag audio, video and img -->
-    <img
-      src="https://images.pexels.com/photos/2564475/pexels-photo-2564475.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      alt="Image from pixels"
-    />
-    <audio controls>
-      <source src="song.mp3" type="audio/mpeg" />
-    </audio>
-    <video controls>
-      <source src="video.mp4" type="video/mp4" />
-    </video>
-    <table border="5">
-      <caption>
-        This is the title of the table
-      </caption>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
-          <th colspan="2" rowspan="2">Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Rabbani</td>
-          <td>21</td>
-          <td>Male</td>
-          <td>Nothing like my address</td>
-        </tr>
-      </tbody>
-    </table>
-    <form action="">
-      <input type="text" name="" id="" />
-      <input type="email" placeholder="Enter your email" />
-      <input type="number" placeholder="Enter a range of numbers" />
-      <input type="radio" placeholder="Enter radio button" />
-      <input type="checkbox" placeholder="Enter the checkbox" />
-      <input type="datetime-local" placeholder="pick a time" />
-      <input type="color" /><input type="range" placeholder="pick a range" />
-      <input
-        type="password"
-        placeholder="password"
-        minlength="8"
-        maxlength="10"
-      />
-      <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
-      <input type="reset" placeholder="" />
-      <input type="submit" placeholder="" />
-      <select name="" id="">
-        <option value="">1</option>
-        <option value="">2</option>
-        <option value="" selected>3</option>
-      </select>
-      <input type="file" />
-    </form>
-    <script src="script.js"></script>
+    <!-- <h1>This is a h1 heading</h1>
+    <img src="header.jpg" alt="Image not found" /> -->
+    <button>Adder</button>
+    <button class="minus">Minus</button>
+    <h1></h1>
+    <script>
+      const h1 = document.querySelector('h1');
+      //   const img = document.querySelector('img');
+      const button = document.querySelector('button');
+      const min = document.querySelector('.minus');
+
+      //   button.addEventListener('click', () => {
+      //     img.style.visibility = 'hidden';
+      //   });
+
+      //   button.addEventListener('dblclick', () => {
+      //     h1.style.color = 'red';
+      //   });
+
+      //   h1.addEventListener('mouseover', () => {
+      //     h1.style.backgroundColor = 'pink';
+      //   });
+      //   function validate(userPassword) {
+      //     userPassword === 'hello'
+      //       ? console.log('Welcome!')
+      //       : console.log('Incorrect Password!');
+      //   }
+      //   validate(prompt('Enter your password: '));
+
+      //   question 1
+      //   function year(val) {
+      //     // implicit type casting..
+      //     return val < 35 ? '20' + val : '19' + val;
+      //   }
+      //   console.log(Number(year(prompt('enter a number: '))));
+
+      //   question 2
+
+      function happyNumber(val) {
+        let val1 = new Array(...String(val));
+        let count = 0;
+        let new_val = 0;
+
+        while (count < 100) {
+          for (let i = 0; i < val1.length; i++) {
+            new_val += Number(val1[i]) * 2;
+          }
+          val1 = new_val;
+          console.log(val1);
+          count += 1;
+        }
+      }
+
+      happyNumber(234);
+
+      //   question 3
+      //   function stringLong(str) {
+      //     str = str.split(' ');
+      //     let listOne = [],
+      //       listTwo = [];
+      //     for (let i = 0; i < str.length; i++) {
+      //       listOne.push(i);
+      //       listTwo.push(str[i].length);
+      //     }
+      //     let findIndexMax = listTwo.indexOf(Math.max(...listTwo));
+      //     return str[listOne[findIndexMax]];
+      //   }
+      //   console.log(stringLong('hai how are you thisislongnumberbytheway'));
+
+      //   question 4
+      //   function perfectNum(val) {
+      //     let li = [];
+      //     for (let i = 1; i < val; i++) val % i === 0 ? li.push(i) : undefined;
+
+      //     let sum = li.reduce((firstNum, secondNum) => firstNum + secondNum, 0);
+
+      //     return sum === val && (sum + val) / 2 === val
+      //       ? 'Perfect Number'
+      //       : 'Not a Perfect Number';
+      //   }
+
+      //   console.log(perfectNum(6));
+      //       <h1>counter : <span id="count">
+      // 1
+      // </span></h1>
+      // <button id="add">add</button>
+      // <button id="sub">sub</button>
+
+      // <script>
+      // count= document.getElementById("count")
+      // add=document.getElementById("add")
+      // sub=document.getElementById("sub")add.addEventListner("click",function add(e){
+      // c= Number(count)+1
+      // count.innerHtml="c"
+
+      // })
+      // sub.addEventListner("click",function add(e){
+      // c= Number(count)-1
+      // if(c==0)
+      //      alert("0")
+      // count.innerHtml="c"
+
+      // })
+
+      //   h1.textContent = Number(prompt('Enter a number'));
+
+      //   function adder(add) {
+      //     add.addEventListener('click', () => {
+      //       let val = h1.textContent;
+      //       check(Number(h1.textContent));
+      //       h1.textContent = Number(val) + 1;
+      //     });
+      //   }
+      //   adder(button);
+
+      //   function minus(min) {
+      //     min.addEventListener('click', () => {
+      //       let val = h1.textContent;
+      //       check(Number(h1.textContent));
+      //       h1.textContent = Number(val) - 1;
+      //     });
+      //   }
+      //   minus(min);
+
+      //   function check(val) {
+      //     if (val === 0) {
+      //       alert('number is 0');
+      //     }
+      //   }
+
+      // question 5
+      //   function unique(str) {
+      //     return new Set(new Array(...str));
+      //   }
+      //   console.log([...unique('thequickbrownfoxjumpsoverthelazydog')].join(''));
+
+      //   var add = new Function('num1', 'num2', 'return num1+num2');
+      //   console.log(add(1, 2));
+    </script>
   </body>
 </html>

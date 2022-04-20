@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <form>
+      <input type="number" id="input_1" />
+      <input type="number" id="input_2" />
+      Answer: <input type="text" id="input_3" />
+      <button class="add">add</button>
+      <button class="minus">minus</button>
+      <button class="mul">mul</button>
+      <button class="div">div</button>
+    </form>
+    <script>
+      let input_1 = document.getElementById('input_1');
+      let input_2 = document.getElementById('input_2');
+      let input_3 = document.getElementById('input_3');
+
+      let ad = document.querySelector('.add');
+      let minus = document.querySelector('.minus');
+      let mul = document.querySelector('.mul');
+      let div = document.querySelector('.div');
+
+      ad.addEventListener('click', e => {
+        e.preventDefault();
+        input_3.value = Number(input_1.value) + Number(input_2.value);
+      });
+
+      minus.addEventListener('click', e => {
+        e.preventDefault();
+        input_3.value = Number(input_1.value) - Number(input_2.value);
+      });
+
+      mul.addEventListener('click', e => {
+        e.preventDefault();
+        input_3.value = Number(input_1.value) * Number(input_2.value);
+      });
+
+      div.addEventListener('click', e => {
+        e.preventDefault();
+        input_3.value = Number(input_1.value) / Number(input_2.value);
+      });
+    </script>
+  </body>
+</html>
