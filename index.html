@@ -45,23 +45,57 @@
 
       //   question 2
 
-      function happyNumber(val) {
-        let val1 = new Array(...String(val));
-        let count = 0;
-        let new_val = 0;
+      //   function happyNumber(val) {
+      //     let val1 = new Array(...String(val));
+      //     let count = 0;
+      //     let new_val = 0;
+      //     while (count < 100) {
+      //       for (let i = 0; i < val1.length; i++) {
+      //         new_val += Number(val1[i]) * 2;
+      //       }
+      //       val1 = new_val;
+      //       console.log(val1);
+      //       count += 1;
+      //     }
+      //   }
 
+      //   happyNumber(234);
+
+      function happyNumber(val) {
+        let val1 = String(val);
+        let count = 0,
+          new_val = 0;
+        //   assuming we'll get happy number within 100 iterations else it making chrome to struck
         while (count < 100) {
           for (let i = 0; i < val1.length; i++) {
-            new_val += Number(val1[i]) * 2;
+            new_val += Number(val1[i]) ** 2;
           }
-          val1 = new_val;
-          console.log(val1);
+
+          if (val1 === '1') {
+            return val;
+          } else {
+            val1 = String(new_val);
+            new_val = 0;
+          }
+
           count += 1;
         }
       }
 
-      happyNumber(234);
+      function driverCode() {
+        for (let i = 0; i < 100; i++) {
+          let val = happyNumber(i);
+          if (val !== undefined) console.log(val);
+        }
+      }
 
+      driverCode();
+
+      //   for (let val = 6; val < 7; val++) {
+      //     if ('Perfect number' === happyNumber(val)) {
+      //       console.log(val);
+      //     }
+      //   }
       //   question 3
       //   function stringLong(str) {
       //     str = str.split(' ');
